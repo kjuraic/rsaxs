@@ -1,0 +1,7 @@
+exportPattern("^[^\\.]")
+import(gplots)
+import(manipulate)
+import(minpack.lm)
+import(playwith)
+import(plot3D)
+import(rpeakfit)
