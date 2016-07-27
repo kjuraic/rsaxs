@@ -3,10 +3,10 @@ Title: GISAXS experimental data analysis in R
 Version: 0.1
 Authors@R: "Krunoslav Juraic <kjuraic@gmail.com> [aut, cre]"
 Description: Tools for GISAXS image processing and data analysis and modeling.
-              Importing and Exporting various file formats. Fiting of 1D cross
-              sections.
-              Bla bla bla bla blabla blabla blabla bla . bla blabla blabla blabla
-              blabla blabla bla bla blabla blabla blabla blabla blabla bla.
+    Importing and Exporting various file formats. Fiting of 1D cross
+    sections.
+    Bla bla bla bla blabla blabla blabla bla . bla blabla blabla blabla
+    blabla blabla bla bla blabla blabla blabla blabla blabla bla.
     (sections, fitting)
 Depends:
     R (>= 3.0.2)
@@ -19,3 +19,4 @@ Imports:
     rpeakfit
 License: GPL
 LazyData: true
+RoxygenNote: 5.0.1

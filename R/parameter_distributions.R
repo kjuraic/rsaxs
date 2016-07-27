@@ -5,7 +5,7 @@
 #' @description Calculate Shultz Size distribution density
 #'              For particle size distribution is better to use Shultz-Zihm distribution
 #'              then normal size distribution because its possible to avoid negative density values
-#'              SOURCE: M. Khaneft, PhD thesis: Polymers in aligned carbon nanotube arrays (2013)
+#'              SOURCE: M. khaneft, phd thesis: polymers in aligned carbon nanotube arrays (2013)
 #' @param r x value for which calculation is done
 #' @param Rmean distribution paramaterer (average)
 #' @param Rsd distribution parameter (standard deviation)
