@@ -3,11 +3,7 @@ Title: GISAXS experimental data analysis in R
 Version: 0.1
 Authors@R: "Krunoslav Juraic <kjuraic@gmail.com> [aut, cre]"
 Description: Tools for GISAXS image processing and data analysis and modeling.
-    Importing and Exporting various file formats. Fiting of 1D cross
-    sections.
-    Bla bla bla bla blabla blabla blabla bla . bla blabla blabla blabla
-    blabla blabla bla bla blabla blabla blabla blabla blabla bla.
-    (sections, fitting)
+    Importing and Exporting various file formats. Constructing 1D cuts. Fitting 1D cuts.
 Depends:
     R (>= 3.0.2)
 Imports:
