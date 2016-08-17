@@ -114,7 +114,7 @@ readFit2dChi <- function(chiName = file.choose()){
 readLogBook <- function (logFile = file.choose()) {
   smpLog <- read.table(file = logFile, header = TRUE, sep = '\t')
   smpLog[,1] <- as.character(smpLog[,1])
-  smpLog$comment <- as.character(smpLog$comment)
+  #smpLog$comment <- as.character(smpLog$comment)
   cat('Number of samples = ', nrow(smpLog))
   return(smpLog)
 }
@@ -129,8 +129,53 @@ readLogBook <- function (logFile = file.choose()) {
 #' @examples
 #'  \dontrun{writeLogBook(logDf)}
 writeLogBook <- function(logDf, logFile = file.choose()) {
-  write.table(logDf, file = logFile, sep = '\t', row.names = FALSE)
+  write.table(logDf, file = logFile,
+              sep = '\t',
+              row.names = FALSE, col.names = TRUE,
+              quote = FALSE)
   return(logFile)
+}
+
+# constructLogBook --------------------------------------------------------
+#' Read and insert data in GISAXS/GIWAXS logBook file
+#' @author Krunoslav Juraic
+#' @description Read existing logBook files and insert additional data if
+#'              neceseary. If file does not exist read all tif files from
+#'              dataDir and manualy insert aditionay data. Refreshed logBook
+#'              data.frame will be saved to file logFile. Function can
+#'              automaticaly read exposure times from tif files. Data.frame
+#'              logDf is dynamicaly added to global environment
+#' @param dataDir folder with tif files
+#' @param logFile name of logBook file
+#' @return logBook data.frame(name, time, angle, sample)
+#' @examples
+#' \dontrun{constructLogBook(dataDir = data_path_raw, logFile = logFile)}
+constructLogBook <- function(dataDir, logFile = file.choose()){
+  setwd(dataDir)
+  if (file.exists(logFile)){
+    logDf <- readLogBook(logFile = logFile)
+    if (!is.element("sample", names(logDf)))
+      logDf$sample = rep("", times = nrow(logDf))
+    if (!is.element("time", names(logDf)))
+      logDf$sample = rep(0, times = nrow(logDf))
+  } else {
+    fnms <- as.character(list.files(path = dataDir, pattern = "*.tif"))
+    logDf <- data.frame(name  = fnms,
+                        time  = rep(0, times = length(fnms)),
+                        angle = rep(0, times = length(fnms)),
+                        sample = rep("", times = length(fnms)))
+
+    expTime <- plyr::aaply(as.character(logDf$name),
+                     .margins = 1,
+                     .fun = read_pilatus_expTime)
+    logDf$time <- expTime
+  }
+  logDf <- edit(logDf)
+  writeLogBook(logDf = logDf, logFile = logFile)
+  assign(x = "logDf", value = logDf, envir = .GlobalEnv)
+  cat("Logbook write successfull in dataframe logDf!\nUpdated file",
+      logFile, "\n")
+  return(logDf)
 }
 
 

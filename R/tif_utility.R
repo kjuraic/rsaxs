@@ -141,7 +141,8 @@ gisaxs2D_angle <- function(mat, aif, tthf, tif_name, save2file = FALSE, width = 
   clab <- 'Intensity [a.u.]'
   x <- tthf
   y <- aif
-  z <- log(mat)
+  #z <- log(mat)
+  z <- mat
   main_title <- ""
   if(title)
     main_title <- tif_name
@@ -151,7 +152,9 @@ gisaxs2D_angle <- function(mat, aif, tthf, tif_name, save2file = FALSE, width = 
           asp = 1,
           NAcol = "black",
           col = palette(rich.colors(255)),
-          zlim = c(1,max(as.vector(z),na.rm = TRUE)),
+          #zlim = c(1,max(as.vector(z),na.rm = TRUE)),
+          zlim = c(median(mat, na.rm = TRUE)*.9,max(as.vector(mat),na.rm=TRUE)),
+          log = "z",
           xlab = xlab,
           ylab = ylab,
           clab = clab,
@@ -170,7 +173,8 @@ gisaxs2D_angle <- function(mat, aif, tthf, tif_name, save2file = FALSE, width = 
             asp = 1,
             NAcol = "black",
             col = palette(rich.colors(255)),
-            zlim = c(1,max(as.vector(z),na.rm = TRUE)),
+            zlim = c(median(mat, na.rm = TRUE)*.9,max(as.vector(mat),na.rm=TRUE)),
+            log = 'z',
             xlab = xlab,
             ylab = ylab,
             clab = clab,

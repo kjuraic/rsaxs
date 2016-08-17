@@ -123,4 +123,38 @@ secCalcAngleQ <- function(sec, ai, calib){
 }
 
 
+# readNikaCalib -----------------------------------------------------------
+#' Read Nika calibration parameters
+#' @author Krunoslav Juraic
+#' @description Readcalibraion parameters calculated by Nika Igor Pro package.
+#'              Parameters shoud be written to tab delimited file. First row
+#'              shoud have parametr names (pxcH	pxcV	saDet	tiltH	tiltV) and
+#'              second row values. If calibration file does not exist program
+#'              asks to insert parameters manualy and then write this
+#'              parameters to file.
+#' @param calibFile full path for calibration file
+#' @return data.frame with calibration data
+#' @examples
+#'        \dontrun{readNikaCalib(calibFile = "calib.txt")}
+readNikaCalib <- function(calibFile){
+  if (file.exists(calibFile)){
+    calib <- read.table(file = calibFile, header = TRUE, sep = "\t")
+  } else {
+    cat("File [", calibFile, "does not exist!\n")
+    cat("Insert calibration parameters manualy\n")
+    calib <- data.frame(pxcH = 0,
+                        pxcV = 0,
+                        saDet = 0,
+                      	tiltH = 0,
+	                      tiltV = 0)
+    calib <- edit(calib)
+    write.table(x = calib, file = calibFile,
+                col.names = TRUE, row.names = FALSE,
+                sep="\t", quote = FALSE)
+    cat("Calibration parameters written to file:\n\t", calibFile)
+  }
+  assign(x = "calib", value = calib, envir = .GlobalEnv)
+  cat("Calibration data read successfully in calib data.frame\n")
+  return(calib)
+}
 

@@ -12,7 +12,8 @@ Imports:
     minpack.lm,
     gplots,
     plot3D,
-    rpeakfit
+    rpeakfit,
+    plyr
 License: GPL
 LazyData: true
 RoxygenNote: 5.0.1
