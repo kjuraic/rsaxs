@@ -95,9 +95,9 @@ alphaTcalc <- function(ai, delta, beta){
   ai <- ai / 180 * pi
   alphaT <- sqrt(ai^2 - 2*delta + 2i * beta)
   alphaT <- alphaT / pi * 180
+
   return(Re(alphaT))
 }
-
 
 
 
@@ -137,7 +137,7 @@ secCalcAngleQ <- function(sec, ai, calib){
 #' @examples
 #'        \dontrun{readNikaCalib(calibFile = "calib.txt")}
 readNikaCalib <- function(calibFile){
-  if (file.exists(calibFile)){
+  if (file.exists(calibFile)) {
     calib <- read.table(file = calibFile, header = TRUE, sep = "\t")
   } else {
     cat("File [", calibFile, "does not exist!\n")
@@ -150,10 +150,10 @@ readNikaCalib <- function(calibFile){
     calib <- edit(calib)
     write.table(x = calib, file = calibFile,
                 col.names = TRUE, row.names = FALSE,
-                sep="\t", quote = FALSE)
+                sep = "\t", quote = FALSE)
     cat("Calibration parameters written to file:\n\t", calibFile)
   }
-  assign(x = "calib", value = calib, envir = .GlobalEnv)
+  assign(x = "calib", value = calib, envir = environment(fun = readNikaCalib))
   cat("Calibration data read successfully in calib data.frame\n")
   return(calib)
 }
