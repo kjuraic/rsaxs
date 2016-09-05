@@ -172,7 +172,7 @@ constructLogBook <- function(dataDir, logFile = file.choose()){
   }
   logDf <- utils::edit(logDf)
   writeLogBook(logDf = logDf, logFile = logFile)
-  assign(x = "logDf", value = logDf, envir = environment(fun = constructLogBook))
+  assign(x = "logDf", value = logDf, envir = .GlobalEnv)
   cat("Logbook write successfull in dataframe logDf!\nUpdated file",
       logFile, "\n")
   return(logDf)

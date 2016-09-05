@@ -153,7 +153,7 @@ readNikaCalib <- function(calibFile){
                 sep = "\t", quote = FALSE)
     cat("Calibration parameters written to file:\n\t", calibFile)
   }
-  assign(x = "calib", value = calib, envir = environment(fun = readNikaCalib))
+  assign(x = "calib", value = calib, envir = .GlobalEnv)
   cat("Calibration data read successfully in calib data.frame\n")
   return(calib)
 }
