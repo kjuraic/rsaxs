@@ -152,7 +152,7 @@ writeLogBook <- function(logDf, logFile = file.choose()) {
 #' \dontrun{constructLogBook(dataDir = data_path_raw, logFile = logFile)}
 constructLogBook <- function(dataDir, logFile = file.choose()){
   setwd(dataDir)
-  if (file.exists(logFile)){
+  if (file.exists(logFile)) {
     logDf <- readLogBook(logFile = logFile)
     if (!is.element("sample", names(logDf)))
       logDf$sample = rep("", times = nrow(logDf))
@@ -170,9 +170,9 @@ constructLogBook <- function(dataDir, logFile = file.choose()){
                      .fun = read_pilatus_expTime)
     logDf$time <- expTime
   }
-  logDf <- edit(logDf)
+  logDf <- utils::edit(logDf)
   writeLogBook(logDf = logDf, logFile = logFile)
-  assign(x = "logDf", value = logDf, envir = .GlobalEnv)
+  assign(x = "logDf", value = logDf, envir = environment(fun = constructLogBook))
   cat("Logbook write successfull in dataframe logDf!\nUpdated file",
       logFile, "\n")
   return(logDf)

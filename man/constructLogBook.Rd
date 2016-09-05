@@ -4,7 +4,7 @@
 \alias{constructLogBook}
 \title{Read and insert data in GISAXS/GIWAXS logBook file}
 \usage{
-constructLogBook(dataDir, logFile)
+constructLogBook(dataDir, logFile = file.choose())
 }
 \arguments{
 \item{dataDir}{folder with tif files}
