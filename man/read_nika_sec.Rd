@@ -21,4 +21,3 @@ read horizontal/vertical section od 2D SAXS images done by Igor Pro Nika package
 \author{
 K. Juraic
 }
-

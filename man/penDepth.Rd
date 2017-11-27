@@ -28,4 +28,3 @@ plot(ai,penDepth(ai, 0.758e-5, 1.755e-7), type='l')
 \author{
 K. Juraic
 }
-

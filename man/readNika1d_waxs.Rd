@@ -22,4 +22,3 @@ read integrated WAXS 1D data reduced by NIKA IgorPro package
 \author{
 K. Juraic
 }
-

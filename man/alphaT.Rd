@@ -25,4 +25,3 @@ alphaT(ai = 0.5, delta = 7e-5, beta = 5e-7)
 \author{
 K. Juraic
 }
-

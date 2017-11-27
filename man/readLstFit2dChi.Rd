@@ -23,4 +23,3 @@ readLstFit2dChi(chi_lst)
 \author{
 K. Juraic
 }
-

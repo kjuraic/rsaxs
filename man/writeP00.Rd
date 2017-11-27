@@ -36,4 +36,3 @@ write\dontrun{P00(fname, qExp, iExp, distSD, pxC, pxSize, pxN, lambda)}
 \author{
 K. Juraic
 }
-

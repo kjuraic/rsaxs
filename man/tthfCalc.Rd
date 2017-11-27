@@ -30,4 +30,3 @@ tthfCalc(100, 50, 1700, -5.21)
 \author{
 K. Juraic
 }
-

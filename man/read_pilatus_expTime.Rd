@@ -22,4 +22,3 @@ read exposure time directly from Pilatus tif image
 \author{
 K. Juraic
 }
-

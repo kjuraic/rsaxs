@@ -25,4 +25,3 @@ Add Q scale columns (qx, Qy, Qz, Qabs) to section data frame
 \author{
 K. Juraic
 }
-

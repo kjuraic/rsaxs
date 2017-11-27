@@ -26,4 +26,3 @@ Readcalibraion parameters calculated by Nika Igor Pro package.
 \author{
 Krunoslav Juraic
 }
-

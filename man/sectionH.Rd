@@ -25,4 +25,3 @@ make a horizontal section of 2D matrix at specific position and width
 \author{
 K. Juraic
 }
-

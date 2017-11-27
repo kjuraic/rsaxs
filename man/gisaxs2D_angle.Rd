@@ -35,4 +35,3 @@ display 2D matrix data with Q scale and/or save in png file
 \author{
 K. Juraic
 }
-

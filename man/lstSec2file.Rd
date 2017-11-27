@@ -17,4 +17,3 @@ save list of section data.frame to file
 \examples{
  \dontrun{lstSec2file(sec, fname)}
 }
-

@@ -22,4 +22,3 @@ at specific pixel and withspecific width preview horizontal and
 \author{
 K. Juraic
 }
-

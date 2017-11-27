@@ -24,4 +24,3 @@ Show list of matrix sections
 \author{
 K. Juraic
 }
-

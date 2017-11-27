@@ -28,4 +28,3 @@ Calculate Shultz Size distribution density
 \author{
 K. Juraic
 }
-

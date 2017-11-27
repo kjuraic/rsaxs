@@ -22,4 +22,3 @@ read chi file (fit2D integrated SAXS data)
 \author{
 K. Juraic
 }
-

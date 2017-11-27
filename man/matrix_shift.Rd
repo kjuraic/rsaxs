@@ -25,4 +25,3 @@ matrix_shift(m,shift)
 \author{
 K. Juraic
 }
-

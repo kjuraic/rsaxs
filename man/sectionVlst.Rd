@@ -33,4 +33,3 @@ make a vertical section for list of 2D matrix at specific
 \author{
 K. Juraic
 }
-

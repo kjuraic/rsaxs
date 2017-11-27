@@ -25,4 +25,3 @@ position of maximum in part of matrix
 \examples{
  \dontrun{mat_max_pos(mat)}
 }
-

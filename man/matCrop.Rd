@@ -28,4 +28,3 @@ matCrop(m,crop_px_h,crop_px_v)
 \author{
 K. Juraic
 }
-

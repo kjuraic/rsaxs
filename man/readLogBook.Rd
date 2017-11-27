@@ -22,4 +22,3 @@ read AustroSAXS logbook file. Call without parameter will open file.chose dialog
 \author{
 K. Juraic
 }
-

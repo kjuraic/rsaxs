@@ -24,4 +24,3 @@ Porosity estimation from crtical angle for total external reflectio
 \author{
 K. Juraic
 }
-

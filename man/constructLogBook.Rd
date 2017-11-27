@@ -28,4 +28,3 @@ Read existing logBook files and insert additional data if
 \author{
 Krunoslav Juraic
 }
-

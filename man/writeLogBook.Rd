@@ -23,4 +23,3 @@ write AustroSAXS logbook file.
 \author{
 K. Juraic
 }
-

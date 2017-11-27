@@ -27,4 +27,3 @@ angle2Q(.22, .28, 0)
 \author{
 K. Juraic
 }
-

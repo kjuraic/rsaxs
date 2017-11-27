@@ -19,4 +19,3 @@ save section data.frame to file
 \examples{
  \dontrun{sec2file(sec, fname)}
 }
-

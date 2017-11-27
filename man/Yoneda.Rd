@@ -43,4 +43,3 @@ Yoneda(tthf = 0, af = 1.5, ai = .22,
 \author{
 K. Juraic
 }
-

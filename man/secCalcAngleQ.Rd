@@ -26,4 +26,3 @@ calculate Angular and Q scale for section from pixels array
 \author{
 K. Juraic
 }
-

@@ -25,4 +25,3 @@ Add angular scale columns (aif, af, tthf) to section data frame
 \author{
 K. Juraic
 }
-

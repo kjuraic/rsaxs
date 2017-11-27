@@ -23,4 +23,3 @@ readLstNika1d(saxs_chi_lst)
 \author{
 K. Juraic
 }
-

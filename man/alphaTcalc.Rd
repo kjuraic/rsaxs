@@ -25,4 +25,3 @@ alphaTcalc(.22,0.758e-5, 1.755e-7)
 \author{
 K. Juraic
 }
-

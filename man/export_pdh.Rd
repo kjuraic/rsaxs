@@ -32,4 +32,3 @@ param_list <- list(title = "AustroSAXS",
    export_pdh(param_list, saxs_dat, file_name)
 
 }
-

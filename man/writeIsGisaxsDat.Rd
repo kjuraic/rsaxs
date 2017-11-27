@@ -45,4 +45,3 @@ weight = 1, scaleFac = 1, shiftFac = 0, comments = "")}
 \author{
 K. Juraic
 }
-

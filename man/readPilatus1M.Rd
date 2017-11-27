@@ -22,4 +22,3 @@ read Pilatus 1M tif file
 \author{
 K. Juraic
 }
-

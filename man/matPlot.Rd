@@ -30,4 +30,3 @@ matPlot(m)
 \author{
 K. Juraic
 }
-

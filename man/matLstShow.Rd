@@ -22,4 +22,3 @@ Show list of image matrix data
 \author{
 K. Juraic
 }
-
